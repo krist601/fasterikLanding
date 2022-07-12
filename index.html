@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fasterik*</title>
+        <link rel="icon" href="images/favicon.ico">
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/camera.css">
+        <link rel="stylesheet" href="css/form.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery-migrate-1.1.1.js"></script>
+        <script src="js/superfish.js"></script>
+        <script src="js/forms.js"></script>
+        <script src="js/jquery.ui.totop.js"></script>
+        <script src="js/jquery.equalheights.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.ui.totop.js"></script>
+        <script src="js/tms-0.4.1.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.slider_wrapper')._TMS({
+                    show: 0,
+                    pauseOnHover: false,
+                    prevBu: '.prev',
+                    nextBu: '.next',
+                    playBu: false,
+                    duration: 800,
+                    preset: 'fade',
+                    pagination: true, //'.pagination',true,'<ul></ul>'
+                    pagNums: false,
+                    slideshow: 8000,
+                    numStatus: false,
+                    banners: 'fade',
+                    waitBannerAnimation: false,
+                    progressBar: false
+                });
+            });
+            $(document).ready(function() {
+                !function() {
+                    var map = []
+                            , names = []
+                            , win = $(window)
+                            , header = $('header')
+                            , currClass
+                    $('.content').each(function(n) {
+                        map[n] = this.offsetTop
+                        names[n] = $(this).attr('id')
+                    })
+                    win
+                            .on('scroll', function() {
+                                var i = 0
+                                while (map[i++] <= win.scrollTop())
+                                    ;
+                                if (currClass !== names[i - 2])
+                                    currClass = names[i - 2]
+                                header.removeAttr("class").addClass(names[i - 2])
+                            })
+                }();
+            });
+            function goToByScroll(id) {
+                $('html,body').animate({scrollTop: $("#" + id).offset().top}, 'slow');
+            }
+            $(document).ready(function() {
+                $().UItoTop({easingType: 'easeOutQuart'});
+            });
+        </script>
+        <!--[if lt IE 8]>
+                <div style=' clear: both; text-align:center; position: relative;'>
+                        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+                                <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+                        </a>
+                </div>
+        <![endif]-->
+        <!--[if lt IE 9]>
+                <script src="js/html5shiv.js"></script>
+                <link rel="stylesheet" media="screen" href="css/ie.css">
+        <![endif]-->
+    </head>
+    <body class="">
+        <!--==============================header=================================-->
+        <header class="page1">
+            <div class="container_12">
+                <div class="grid_12">
+                    <h1><a href="#" onClick="goToByScroll('page1');
+                                                return false;"><img src="images/fasterikfont.png" alt="Gerald Harris attorney at law"></a></h1>
+                    <div class="menu_block">
+                        <nav class="">
+                            <ul class="sf-menu">
+                                <li class="current men"><a onClick="goToByScroll('page1');
+                                                                        return false;" href="#">Inicio </a> <strong class="hover"></strong></li>
+                                <li class="men1"><a onClick="goToByScroll('page2');
+                                                                        return false;" href="#">Servicios</a><strong class="hover"></strong></li>
+                                <li class=" men2"><a onClick="goToByScroll('page3');
+                                                                        return false;" href="#">Portafolio</a> <strong class="hover"></strong></li>
+                                <li class=" men3"><a onClick="goToByScroll('page4');
+                                                                        return false;" href="#">Nosotros</a><strong class="hover"></strong></li>
+                                <li class=" men4"><a onClick="goToByScroll('page5');
+                                                                        return false;" href="#">Contactos</a> <strong class="hover"></strong></li>
+                            </ul>
+                        </nav>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </header>
+        <!--=======content================================-->
+        <div id="page1" class="content">
+            <div class="ic"></div>
+            <div class="container_12">
+                <div class="grid_12">
+                    <div class="slider_wrapper">
+                        <ul class="items">
+                            <li>
+                                <img src="images/spacer.gif" alt="">
+                                <div class="caption banner">
+                                    <h2>¡Te mostramos el camino del éxito!</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/spacer.gif" alt="">
+                                <div class="caption banner">
+                                    <h2>¡Calidad y Compromiso!</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/spacer.gif" alt="">
+                                <div class="caption banner">
+                                    <h2>¡Tenemos la solución a tus problemas!</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/spacer.gif" alt="">
+                                <div class="caption banner">
+                                    <h2>¡Identificamos las necesidades e ideas y las convertimos en realidad!</h2>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="socials">
+                        <a href="#"></a>
+                        <a href="https://twitter.com/fasterikvzla"></a>
+                        <a href="mailto:contact@fasterik.com"></a>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page2" class="content">
+            <div class="container_12">
+                <div class="grid_12">
+                    <div class="slogan" style="margin-bottom: 50px;">
+                        <h3>Nuestros Servicios</h3>
+                        <div class="text1">
+                            <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Fasterik es una organización que desea ofrecer distinto tipos de servicios enfocados en el área 
+                                de tecnología. Dichos servicios consisten en crear soluciones a nuestros clientes apoyadas en el área de la 
+                                informática cuyo objetivo es ofrecer mayor productividad adaptándose a las necesidades particulares de cada cliente.
+                                <br><br>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nuestro abanico de servicios está compuesto en:
+                                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Aplicaciones Móviles
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Aplicaciones Web
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Aplicaciones de Escritorio
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* BPM
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Base de datos
+                                <br><br>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Identificamos las necesidades e ideas de nuestros clientes y las convertimos en realidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="box maxheight1">
+                        <img src="images/box1_consultoria.png" alt="">
+                        <div class="text1">Consultoría</div><br>Te brindamos nuestros servicios para ofrecerte soluciones viables para tu negocio.
+                    </div>
+                </div>
+
+                <div class="grid_3">
+                    <div class="box maxheight1">
+                        <img src="images/box1_img4.png" alt="">
+                        <div class="text1">Asesoramiento</div><br>Estamos para aconsejarte y ayudarte a elegir la mejor solución tecnológica para tu negocio.
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="box maxheight1">
+                        <img src="images/box1_img1.png" alt="">
+                        <div class="text1">Estrategias</div><br>Nos adaptamos a distintas metodologías de trabajo para cumplir con las necesidades de tu negocio en el menor tiempo<br> y con la mayor calidad.
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="box maxheight1">
+                        <img src="images/box1_idea.png" alt="">
+                        <div class="text1">Grandes Ideas</div><br>De las grandes ideas nacen <br>grandes soluciones. <br>Estamos para ayudarte.
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="box maxheight1">
+                        <img src="images/box1_img2.png" alt="">
+                        <div class="text1">Evaluación</div><br>Evaluamos las posibles soluciones que se adapte a los requerimientos solicitados, tomando en cuenta el valor que genera cada una de ellas en tu negocio.
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="box maxheight1">
+                        <img src="images/box_codigo.png" alt="">
+                        <div class="text1">Desarrollo</div><br>Desarrollamos productos con lenguajes reconocidos y utilizados en el mercado que se adaptan a todo tipo de soluciones.
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="box maxheight1">
+                        <img src="images/box1_calidad.png" alt="">
+                        <div class="text1">Calidad</div><br>La calidad es nuestra razón de ser, queremos que siempre pueda<br> contar con nosotros y ganarnos su confianza.
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="box maxheight1">
+                        <img src="images/box1_resultados.png" alt="">
+                        <div class="text1">Resultados</div><br>Queremos mejorar los procesos para hacer más productivo su negocio gracias a una solución efectiva que queremos brindarle.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="page3" class="content">
+            <div class="container_12">
+                <div class="grid_12" style="height: 100px;">
+                    <h3>Portafolio</h3>
+                </div>
+                <center>
+                <div class="grid_12">
+                    <div class="slider_wrapper" style="height: 570px;">
+                        
+                        <ul class="items">
+                            <li>
+                                <img src="images/fast.png" alt="">
+                                <div class="caption banner">
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/consulrima.png" alt="">
+                                <div class="caption banner">
+                                    <h2></h2>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/iacd.png" alt="">
+                                <div class="caption banner">
+                                    <h2></h2>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/guitarTeacher2.jpg" alt="">
+                                <div class="caption banner">
+                                    <h2></h2>
+                                </div>
+                            </li>
+                        </ul>
+                            
+                    </div>
+                </div>
+                </center>
+            </div>
+        </div>
+        <div id="page4" class="content">
+            <div class="container_12">
+                <div class="grid_12">
+                    <div class="slogan" style="margin-bottom: 50px;">
+                        <h3 style="margin-bottom:  30px;">Servicios de calidad para nuestros Clientes</h3>
+                        <div class="text1" >
+                            <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Somos una empresa de desarrollo de software creada por jóvenes emprendedores 
+                                venezolanos con experiencia, especializados en el desarrollo de soluciones informáticas que se 
+                                adapten a las necesidades de nuestros clientes, ofreciendo soluciones tecnológicas de calidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_13">
+                    <div class="box1 maxheight">
+                        <img src="images/box_armen.jpg" alt="">
+                        <div class="text1"><a href="#">Armen Djenanian</a></div>Analista de Sistemas
+                        <div class="socials1">
+                            <a href="callto:adjenanian"></a>
+                            <a href="mailto:armen91@gmail.com"></a>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_13">
+                    <div class="box1 maxheight">
+                        <img src="images/box_angel.jpg" alt="">
+                        <div class="text1"><a href="#">Angel Alberici</a></div>Arquitectura de Software
+                        <div class="socials1">
+                            <a href="callto:angelalberici"></a>
+                            <a href="mailto:angelalberici@gmail.com"></a>
+                            <a href="http://ve.linkedin.com/pub/angel-dario-alberici-trastoy/45/376/477?trk=pub-pbmap"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_13">
+                    <div class="box1 maxheight">
+                        <img src="images/box_kristian.jpg" alt="">
+                        <div class="text1"><a href="#">Kristian Cortés</a></div>Ventas y Bases de Datos
+                        <div class="socials1">
+                            <a href="callto:krist601"></a>
+                            <a href="mailto:kristcort@gmail.com"></a>
+                            <a href="http://ve.linkedin.com/pub/kristian-cortes/3a/5bb/73"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_13">
+                    <div class="box1 maxheight">
+                        <img src="images/box_keyla.jpg" alt="">
+                        <div class="text1"><a href="#">Keyla Hernández</a></div>Consultora
+                        <div class="socials1">
+                            <a href="callto:key.hernandez"></a>
+                            <a href="mailto:key.hernandez.1@gmail.com"></a>
+                            <a href="http://ve.linkedin.com/pub/keyla-hernandez/72/466/68?trk=pub-pbmap"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_13">
+                    <div class="box1 maxheight">
+                        <img src="images/box_francisco.jpg" alt="">
+                        <div class="text1"><a href="#">José Fco Perez</a></div>Ventas y Consultor
+                        <div class="socials1">
+                            <a href="callto:cisco.p721"></a>
+                            <a href="mailto:cisco721@gmail.com"></a>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page5" class="content">
+            <div class="container_12">
+                <div class="grid_12">
+                    <div class="slogan">
+                        <h3>Entra en contacto con nosotros</h3>
+                        <div class="text1">Para cualquier información que necesites, no dudes en contactar con cualquiera de los miemos de Fasterik (correo o/y teléfono) o enviar su solicitud a través 
+                            del siguiente formulario y nos pondremos en contacto contigo a la brevedad!.
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="map">
+                    <div class="grid_3">
+                        <div class="text1"><a style="font-size: 30px; color: white; weight: 10px;">Dirección</a></div>
+                        <address>
+                            <dl>
+                                <dt><a style="font-size: 18px; color: white;">Fasterik.</a><br>
+                                Caracas,<br>
+                                Venezuela.
+                                </dt>
+                                <dd style="color: #f8a49d"><span style="font-size: 13px;color: white;">Angel Alberici:</span>+58 414 9194380</dd>
+                                <dd style="color: #f8a49d"><span style="font-size: 13px;color: white;">Kristian Cortés:</span>+58 412 9348003</dd>
+                                <dd style="color: #f8a49d"><span style="font-size: 13px;color: white;">Armen Djnanian:</span>+58 414 9385411</dd>
+                                <dd style="color: #f8a49d"><span style="font-size: 13px;color: white;">Keyla Hernández:</span>+58 416 8331992</dd>
+                                <dd style="color: #f8a49d"><span style="font-size: 13px;color: white;">Francisco Perez:</span>+58 412 5581052</dd>
+                                <dd>E-mail: <a href="mailto:contact@fasterik.com" class="link-1">contact@fasterik.com</a></dd>
+                                <dd>Twitter: <a href="https://twitter.com/fasterikvzla" class="link-1">@fasterik</a></dd>
+                            </dl>
+                        </address>
+                    </div>
+                    <div class="grid_3">
+                        <div class="text1">&nbsp;</div>
+                        <figure class="">
+                            <iframe src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=UCAB,+Caracas,+Distrito+Metropolitano+de+Caracas,+Venezuela&amp;aq=0&amp;oq=ucab&amp;sll=25.860044,-97.503823&amp;sspn=0.021278,0.038366&amp;t=p&amp;gl=mx&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;ll=10.4642,-66.9758&amp;spn=0.006295,0.006295&amp;output=embed"></iframe>
+                        </figure>
+                    </div>
+                    <div class="grid_5 prefix_1">
+                        <div class="text1"><a style="font-size: 30px; color: white">Contáctanos</a></div>
+                        <form id="form">
+                            <div class="success_wrapper">
+                                <div class="success">¡Formulario enviado con éxito!<br>
+                                    <strong>Nos comunicaremos contigo pronto.</strong> </div></div>
+                            <fieldset>
+                                <label class="name">
+                                    <input type="text" value="Nombre:">
+                                    <br class="clear">
+                                    <span class="error error-empty">*Este nombre no es válido.</span><span class="empty error-empty">*Este campo es obligatorio.</span> </label>
+                                <label class="email">
+                                    <input type="text" value="E-mail:">
+                                    <br class="clear">
+                                    <span class="error error-empty">*Esta dirección de correo no es válida.</span><span class="empty error-empty">*Este campo es obligatorio.</span> </label>
+                                <label class="message">
+                                    <textarea>Mensaje:</textarea>
+                                    <br class="clear">
+                                    <span class="error">*El mensaje es muy corto.</span> <span class="empty">*Este campo es obligatorio.</span> </label>
+                                <div class="clear"></div>
+                                <div class="btns"><a data-type="submit" class="link1">Enviar</a>
+                                    <div class="clear"></div>
+                                </div></fieldset></form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--==============================footer=================================-->
+        <footer>
+            <div class="container_12">
+                <div class="grid_12">
+                    <div class="copy">
+                        <a onClick="goToByScroll('page1');
+                                                        return false;" href="#"><img src="images/footer_logo.png" alt=""></a>  &copy; 2014 | <a href="#">Politica de Privacidad</a> <br /> Website diseñado por Fasterik Inc.<br />Template diseñado por TemplateMonster
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </footer>
+    </body>
+</html>
